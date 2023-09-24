@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.btnC_update = new Guna.UI2.WinForms.Guna2Button();
             this.btnC_del = new Guna.UI2.WinForms.Guna2Button();
@@ -44,10 +44,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxC_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBoxC_id = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnP_logout = new Guna.UI2.WinForms.Guna2Button();
             this.label_id = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView_category = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnC_logout = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_category)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             // btnC_update
             // 
             this.btnC_update.BorderRadius = 8;
+            this.btnC_update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnC_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnC_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnC_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -77,10 +78,12 @@
             this.btnC_update.Size = new System.Drawing.Size(84, 40);
             this.btnC_update.TabIndex = 12;
             this.btnC_update.Text = "Обновить";
+            this.btnC_update.Click += new System.EventHandler(this.btnC_update_Click);
             // 
             // btnC_del
             // 
             this.btnC_del.BorderRadius = 8;
+            this.btnC_del.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnC_del.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnC_del.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnC_del.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -93,10 +96,12 @@
             this.btnC_del.Size = new System.Drawing.Size(84, 40);
             this.btnC_del.TabIndex = 11;
             this.btnC_del.Text = "Удалить";
+            this.btnC_del.Click += new System.EventHandler(this.btnC_del_Click);
             // 
             // btnC_add
             // 
             this.btnC_add.BorderRadius = 8;
+            this.btnC_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnC_add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnC_add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnC_add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -143,6 +148,7 @@
             // btnC_products
             // 
             this.btnC_products.BorderRadius = 10;
+            this.btnC_products.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnC_products.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnC_products.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnC_products.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -155,10 +161,12 @@
             this.btnC_products.Size = new System.Drawing.Size(180, 45);
             this.btnC_products.TabIndex = 20;
             this.btnC_products.Text = "Продукты";
+            this.btnC_products.Click += new System.EventHandler(this.btnC_products_Click);
             // 
             // btnP_selling
             // 
             this.btnP_selling.BorderRadius = 10;
+            this.btnP_selling.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnP_selling.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnP_selling.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnP_selling.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -175,6 +183,7 @@
             // btnP_seller
             // 
             this.btnP_seller.BorderRadius = 10;
+            this.btnP_seller.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnP_seller.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnP_seller.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnP_seller.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -199,6 +208,8 @@
             this.label_close.TabIndex = 17;
             this.label_close.Text = "X";
             this.label_close.Click += new System.EventHandler(this.label_close_Click);
+            this.label_close.MouseEnter += new System.EventHandler(this.label_close_MouseEnter);
+            this.label_close.MouseLeave += new System.EventHandler(this.label_close_MouseLeave);
             // 
             // label1
             // 
@@ -249,22 +260,6 @@
             this.textBoxC_id.Size = new System.Drawing.Size(146, 30);
             this.textBoxC_id.TabIndex = 1;
             // 
-            // btnP_logout
-            // 
-            this.btnP_logout.BorderRadius = 10;
-            this.btnP_logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnP_logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnP_logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnP_logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnP_logout.FillColor = System.Drawing.Color.Brown;
-            this.btnP_logout.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnP_logout.ForeColor = System.Drawing.Color.White;
-            this.btnP_logout.Location = new System.Drawing.Point(29, 618);
-            this.btnP_logout.Name = "btnP_logout";
-            this.btnP_logout.Size = new System.Drawing.Size(137, 22);
-            this.btnP_logout.TabIndex = 21;
-            this.btnP_logout.Text = "Выйти";
-            // 
             // label_id
             // 
             this.label_id.AutoSize = true;
@@ -296,27 +291,27 @@
             // 
             // dataGridView_category
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridView_category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dataGridView_category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView_category.BackgroundColor = System.Drawing.Color.FloralWhite;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView_category.ColumnHeadersHeight = 24;
             this.dataGridView_category.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_category.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_category.DefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView_category.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView_category.Location = new System.Drawing.Point(305, 0);
             this.dataGridView_category.Name = "dataGridView_category";
@@ -344,6 +339,25 @@
             this.dataGridView_category.ThemeStyle.RowsStyle.Height = 22;
             this.dataGridView_category.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView_category.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridView_category.Click += new System.EventHandler(this.dataGridView_category_Click);
+            // 
+            // btnC_logout
+            // 
+            this.btnC_logout.BorderRadius = 10;
+            this.btnC_logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnC_logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnC_logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnC_logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnC_logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnC_logout.FillColor = System.Drawing.Color.Brown;
+            this.btnC_logout.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnC_logout.ForeColor = System.Drawing.Color.White;
+            this.btnC_logout.Location = new System.Drawing.Point(29, 618);
+            this.btnC_logout.Name = "btnC_logout";
+            this.btnC_logout.Size = new System.Drawing.Size(137, 22);
+            this.btnC_logout.TabIndex = 21;
+            this.btnC_logout.Text = "Выйти";
+            this.btnC_logout.Click += new System.EventHandler(this.btnC_logout_Click);
             // 
             // CategoryForm
             // 
@@ -355,7 +369,7 @@
             this.Controls.Add(this.btnP_selling);
             this.Controls.Add(this.btnP_seller);
             this.Controls.Add(this.label_close);
-            this.Controls.Add(this.btnP_logout);
+            this.Controls.Add(this.btnC_logout);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -385,9 +399,9 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox textBoxC_name;
         private Guna.UI2.WinForms.Guna2TextBox textBoxC_id;
-        private Guna.UI2.WinForms.Guna2Button btnP_logout;
         private System.Windows.Forms.Label label_id;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridView_category;
+        private Guna.UI2.WinForms.Guna2Button btnC_logout;
     }
 }

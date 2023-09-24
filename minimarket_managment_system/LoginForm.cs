@@ -36,5 +36,10 @@ namespace minimarket_managment_system
             textBox_name.Clear();
             textBox_pass.Clear();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
