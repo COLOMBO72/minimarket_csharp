@@ -139,5 +139,12 @@ namespace minimarket_managment_system
             product.Show();
             this.Hide();
         }
+
+        private void btnP_seller_Click(object sender, EventArgs e)
+        {
+            SellerForm seller = new SellerForm();
+            seller.Show();
+            this.Hide();
+        }
     }
 }

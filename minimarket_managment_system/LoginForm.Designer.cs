@@ -31,11 +31,10 @@
             this.button_join = new Guna.UI2.WinForms.Guna2Button();
             this.textBox_pass = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_name = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label_error = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.button_signup = new Guna.UI2.WinForms.Guna2Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_role = new System.Windows.Forms.ComboBox();
             this.label_close = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -68,7 +67,7 @@
             this.textBox_pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBox_pass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBox_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_pass.Location = new System.Drawing.Point(225, 166);
+            this.textBox_pass.Location = new System.Drawing.Point(223, 181);
             this.textBox_pass.Name = "textBox_pass";
             this.textBox_pass.PasswordChar = '•';
             this.textBox_pass.PlaceholderText = "Пароль";
@@ -88,24 +87,13 @@
             this.textBox_name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBox_name.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBox_name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_name.Location = new System.Drawing.Point(225, 132);
+            this.textBox_name.Location = new System.Drawing.Point(223, 147);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.PasswordChar = '\0';
             this.textBox_name.PlaceholderText = "Имя пользователя";
             this.textBox_name.SelectedText = "";
             this.textBox_name.Size = new System.Drawing.Size(198, 28);
             this.textBox_name.TabIndex = 3;
-            // 
-            // label_error
-            // 
-            this.label_error.BackColor = System.Drawing.Color.Transparent;
-            this.label_error.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_error.ForeColor = System.Drawing.Color.Crimson;
-            this.label_error.Location = new System.Drawing.Point(186, 209);
-            this.label_error.Name = "label_error";
-            this.label_error.Size = new System.Drawing.Size(279, 17);
-            this.label_error.TabIndex = 4;
-            this.label_error.Text = "Ошибка, неверное имя пользователя или пароль";
             // 
             // guna2HtmlLabel1
             // 
@@ -143,18 +131,18 @@
             this.button_signup.TabIndex = 8;
             this.button_signup.Text = "Зарегистрироваться";
             // 
-            // comboBox1
+            // comboBox_role
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_role.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_role.FormattingEnabled = true;
+            this.comboBox_role.Items.AddRange(new object[] {
             "Админ",
             "Продавец"});
-            this.comboBox1.Location = new System.Drawing.Point(255, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 27);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.Text = "Выберите роль";
+            this.comboBox_role.Location = new System.Drawing.Point(255, 91);
+            this.comboBox_role.Name = "comboBox_role";
+            this.comboBox_role.Size = new System.Drawing.Size(139, 27);
+            this.comboBox_role.TabIndex = 9;
+            this.comboBox_role.Text = "Выберите роль";
             // 
             // label_close
             // 
@@ -176,11 +164,10 @@
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(634, 361);
             this.Controls.Add(this.label_close);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_role);
             this.Controls.Add(this.button_signup);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.label_error);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_pass);
             this.Controls.Add(this.button_join);
@@ -200,11 +187,10 @@
         private Guna.UI2.WinForms.Guna2Button button_join;
         private Guna.UI2.WinForms.Guna2TextBox textBox_pass;
         private Guna.UI2.WinForms.Guna2TextBox textBox_name;
-        private Guna.UI2.WinForms.Guna2HtmlLabel label_error;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button button_signup;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_role;
         private System.Windows.Forms.Label label_close;
     }
 }

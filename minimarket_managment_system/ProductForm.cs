@@ -129,5 +129,70 @@ namespace minimarket_managment_system
             textBoxP_quanity.Text = dataGridView_product.SelectedRows[0].Cells[3].Value.ToString();
             comboBoxP_category.SelectedValue = dataGridView_product.SelectedRows[0].Cells[4].Value.ToString();
         }
+
+        private void btnP_del_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBoxP_id.Text == "")
+                {
+                    MessageBox.Show("Заполните пустые поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string deleteQuery = "DELETE FROM Product WHERE Product_Id=" + textBoxP_id.Text + "";
+                    SqlCommand command = new SqlCommand(deleteQuery, dbconn.GetCon());
+                    dbconn.OpenCon();
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Продукт удален.");
+                    dbconn.CloseCon();
+                    GetTable();
+                    Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnP_refresh_Click(object sender, EventArgs e)
+        {
+            GetTable();
+        }
+
+        private void comboBoxP_search_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string selectQuery = "SELECT * FROM Product WHERE Product_Category='"+comboBoxP_search.SelectedValue.ToString()+"'";
+            SqlCommand command = new SqlCommand(selectQuery, dbconn.GetCon());
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dataGridView_product.DataSource = table;
+        }
+
+        private void btnP_logout_MouseEnter(object sender, EventArgs e)
+        {
+            btnP_logout.ForeColor = Color.Red;
+        }
+
+        private void btnP_logout_MouseLeave(object sender, EventArgs e)
+        {
+            btnP_logout.ForeColor = Color.Brown;
+        }
+
+        private void btnP_logout_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Hide();
+        }
+
+        private void btnP_seller_Click(object sender, EventArgs e)
+        {
+            SellerForm seller = new SellerForm();
+            seller.Show();
+            this.Hide();
+        }
     }
 }

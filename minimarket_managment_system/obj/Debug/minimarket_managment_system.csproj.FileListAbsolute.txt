@@ -14,3 +14,4 @@ G:\myprograms\minimarket_managment_system\minimarket_managment_system\obj\Debug\
 G:\myprograms\minimarket_managment_system\minimarket_managment_system\obj\Debug\minimarket_managment_system.SplashForm.resources
 G:\myprograms\minimarket_managment_system\minimarket_managment_system\obj\Debug\minimarket_managment_system.ProductForm.resources
 G:\myprograms\minimarket_managment_system\minimarket_managment_system\obj\Debug\minimarket_managment_system.CategoryForm.resources
+G:\myprograms\minimarket_managment_system\minimarket_managment_system\obj\Debug\minimarket_managment_system.SellerForm.resources

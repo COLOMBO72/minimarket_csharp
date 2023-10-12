@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.btnC_update = new Guna.UI2.WinForms.Guna2Button();
             this.btnC_del = new Guna.UI2.WinForms.Guna2Button();
@@ -55,10 +55,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(14, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(304, 29);
+            this.label5.Size = new System.Drawing.Size(264, 26);
             this.label5.TabIndex = 15;
             this.label5.Text = "УПРАВЛЕНИЕ КАТЕГОРИЯМИ";
             // 
@@ -156,7 +156,7 @@
             this.btnC_products.FillColor = System.Drawing.Color.RosyBrown;
             this.btnC_products.Font = new System.Drawing.Font("Calibri", 14.25F);
             this.btnC_products.ForeColor = System.Drawing.Color.White;
-            this.btnC_products.Location = new System.Drawing.Point(17, 116);
+            this.btnC_products.Location = new System.Drawing.Point(22, 116);
             this.btnC_products.Name = "btnC_products";
             this.btnC_products.Size = new System.Drawing.Size(180, 45);
             this.btnC_products.TabIndex = 20;
@@ -174,7 +174,7 @@
             this.btnP_selling.FillColor = System.Drawing.Color.RosyBrown;
             this.btnP_selling.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnP_selling.ForeColor = System.Drawing.Color.White;
-            this.btnP_selling.Location = new System.Drawing.Point(17, 179);
+            this.btnP_selling.Location = new System.Drawing.Point(22, 179);
             this.btnP_selling.Name = "btnP_selling";
             this.btnP_selling.Size = new System.Drawing.Size(180, 45);
             this.btnP_selling.TabIndex = 19;
@@ -191,11 +191,12 @@
             this.btnP_seller.FillColor = System.Drawing.Color.RosyBrown;
             this.btnP_seller.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnP_seller.ForeColor = System.Drawing.Color.White;
-            this.btnP_seller.Location = new System.Drawing.Point(17, 56);
+            this.btnP_seller.Location = new System.Drawing.Point(22, 56);
             this.btnP_seller.Name = "btnP_seller";
             this.btnP_seller.Size = new System.Drawing.Size(180, 45);
             this.btnP_seller.TabIndex = 18;
             this.btnP_seller.Text = "Продавец";
+            this.btnP_seller.Click += new System.EventHandler(this.btnP_seller_Click);
             // 
             // label_close
             // 
@@ -291,27 +292,27 @@
             // 
             // dataGridView_category
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dataGridView_category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridView_category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_category.BackgroundColor = System.Drawing.Color.FloralWhite;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_category.ColumnHeadersHeight = 24;
             this.dataGridView_category.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_category.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_category.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_category.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView_category.Location = new System.Drawing.Point(305, 0);
             this.dataGridView_category.Name = "dataGridView_category";
@@ -352,7 +353,7 @@
             this.btnC_logout.FillColor = System.Drawing.Color.Brown;
             this.btnC_logout.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnC_logout.ForeColor = System.Drawing.Color.White;
-            this.btnC_logout.Location = new System.Drawing.Point(29, 618);
+            this.btnC_logout.Location = new System.Drawing.Point(34, 616);
             this.btnC_logout.Name = "btnC_logout";
             this.btnC_logout.Size = new System.Drawing.Size(137, 22);
             this.btnC_logout.TabIndex = 21;
